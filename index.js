@@ -22,6 +22,7 @@ const users = [
 
 // use query parameter
 app.get('/users', (req, res) => {
+    // get the search query
     const search = req.query.search;
     if (search) {
         const searchResult = users.filter(user => user.name.toLocaleLowerCase().includes(search));
